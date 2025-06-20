@@ -1,5 +1,9 @@
 // Main JavaScript file for Yes For Wilmington Schools
 
+// Import images (Vite will handle optimization and hashing)
+import placeholderImage from './images/placeholder.svg'
+import logoImage from './images/yes-logo.png'
+
 // Add fade-in animation to sections when they come into view
 const observerOptions = {
   threshold: 0.1,
@@ -16,6 +20,12 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all sections
 document.addEventListener('DOMContentLoaded', () => {
+  // Set the placeholder image in the about section
+  const imagePlaceholder = document.querySelector('.logo-image');
+  if (imagePlaceholder) {
+    imagePlaceholder.src = logoImage
+  }
+
   const sections = document.querySelectorAll('section');
   sections.forEach(section => {
     observer.observe(section);
@@ -33,28 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         targetSection.scrollIntoView({
           behavior: 'smooth'
         });
-      }
-    });
-  });
-
-  // Add click handlers for buttons
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      const buttonText = e.target.textContent;
-      
-      switch(buttonText) {
-        case 'Get Involved':
-          alert('Thank you for your interest! Please contact us to learn more about getting involved.');
-          break;
-        case 'Email Us':
-          window.location.href = 'mailto:contact@yesforwilmingtonschools.org';
-          break;
-        case 'Call Us':
-          window.location.href = 'tel:+1234567890';
-          break;
-        default:
-          console.log('Button clicked:', buttonText);
       }
     });
   });
