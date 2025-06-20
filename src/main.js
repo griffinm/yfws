@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       }
+      
+      // Hide mobile menu after clicking a link
+      hideMobileMenu();
     });
   });
 
@@ -62,18 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // Insert mobile menu button before the nav
   header.querySelector('.flex').insertBefore(mobileMenuButton, nav);
 
+  // Function to hide mobile menu
+  function hideMobileMenu() {
+    nav.classList.add('hidden');
+    nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'p-4');
+  }
+
+  // Function to show mobile menu
+  function showMobileMenu() {
+    nav.classList.remove('hidden');
+    nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'p-4');
+  }
+
   // Toggle mobile menu
   mobileMenuButton.addEventListener('click', () => {
-    nav.classList.toggle('hidden');
-    nav.classList.toggle('flex');
-    nav.classList.toggle('flex-col');
-    nav.classList.toggle('absolute');
-    nav.classList.toggle('top-full');
-    nav.classList.toggle('left-0');
-    nav.classList.toggle('right-0');
-    nav.classList.toggle('bg-white');
-    nav.classList.toggle('shadow-lg');
-    nav.classList.toggle('p-4');
+    if (nav.classList.contains('hidden')) {
+      showMobileMenu();
+    } else {
+      hideMobileMenu();
+    }
+  });
+
+  // Hide mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!header.contains(e.target) && !nav.classList.contains('hidden')) {
+      hideMobileMenu();
+    }
   });
 
   console.log('Yes For Wilmington Schools website loaded successfully!');
