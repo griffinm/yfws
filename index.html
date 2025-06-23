@@ -6,11 +6,11 @@
   <title>Vote Yes For Wilmington Schools</title>
   <link rel="stylesheet" href="./src/style.css">
 </head>
-<strongody class="min-h-screen text-black">
+<body class="min-h-screen text-black">
   <div id="app" class="flex flex-col min-h-screen">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b text-primary-400 fixed top-0 left-0 right-0 z-50 h-[80px]">
+    <header class="bg-white shadow-sm border-b text-primary-400 fixed top-0 left-0 right-0 z-50">
       <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <div class="flex justify-between items-center py-6">
           <div class="flex items-center">
@@ -19,9 +19,9 @@
             <h1 class="text-lg md:text-2xl font-bold text-primary-400">Vote Yes for Wilmington Schools</h1>
           </div>
           <nav class="hidden md:flex">
-            <a href="#home" class="text-gray-500 hover px-3 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="#about" class="text-gray-500 hover px-3 py-2 rounded-md text-sm font-medium">About</a>
-            <a href="#support" class="text-gray-500 hover px-3 py-2 rounded-md text-sm font-medium">Support</a>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#support" class="nav-link">Support Us</a>
           </nav>
         </div>
       </div>
@@ -30,8 +30,8 @@
     <!-- Main Content -->
     <main class="flex flex-col items-center flex-1">
       <!-- Hero Section -->
-      <section id="home" class="px-6 text-center text-white h-screen sm:h-[calc(100vh-80px-200px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center bg-primary-400">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl p-6 md:p-12">
+      <section id="home" class="home-section text-center text-white h-screen sm:h-[calc(100vh-80px-200px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center bg-primary-400">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl md:p-12">
           <div class="flex justify-center">
             <img
               src="./src/images/yes-logo.png"
@@ -46,7 +46,7 @@
             <p class="text-xl mb-8 max-w-3xl mx-auto">
               A 2/3 vote is required at the in-person meeting on September 13th. We need <strong><u>all</u></strong> parents, guardians, caregivers, and supporters to attend and help secure a brighter future for Wilmington students.
             </p>
-            <a href="#about" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+            <a href="#about" class="button">
               Learn More
             </a>
           </div>
@@ -54,8 +54,8 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="bg-white text-primary-400 flex flex-col items-center w-full">
-        <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl p-6 md:p-12">
+      <section id="about" class="home-section home-section-white">
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl md:p-12">
           <div>
             <h2 class="text-3xl font-bold mb-6">The right school. The right price tag.</h2>
             </h2>
@@ -83,46 +83,38 @@
       </section>
 
       <!-- Support Section -->
-      <section id="support" class="text-primary-400 bg-primary-100 flex flex-col items-center w-full">
-        <div class="flex flex-col gap-12 items-center max-w-7xl p-6 md:p-12">
-          <h2 class="text-3xl font-bold text-center text-primary-400">How You Can Support</h2>
+      <section id="support" class="home-section home-section-light-blue">
+        <div class="flex flex-col gap-12 items-center max-w-7xl md:p-12">
+          <h2 class="text-3xl font-bold text-center text-primary-400">How You Can Help</h2>
           <div class="grid md:grid-cols-3 gap-8">
 
             <!-- Learn More -->
-            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col">
-              <div class="flex flex-row gap-4 items-center flex-1">
-                <p class="text-lg text-center mx-auto max-w-sm">
-                  Understand the plan and how your vote directly impacts our schools.
-                </p>
-              </div>
+            <div class="hero-card">
+              Understand the plan and how your vote directly impacts our schools.
               <div class="flex justify-center mt-4">
-                <a target="_blank" href="https://docs.google.com/document/d/1sgLuVfBuVMdRGaCGY9GweCNrJYOv6Kw1fRsvB5ihFAQ/edit?tab=t.0" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                <a target="_blank" href="https://docs.google.com/document/d/1sgLuVfBuVMdRGaCGY9GweCNrJYOv6Kw1fRsvB5ihFAQ/edit?tab=t.0" class="button">
                   Learn More
                 </a>
               </div>
             </div>
 
             <!-- Donate -->
-            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col items-center text-center">
-              <p class="text-lg mb-4 text-center mx-auto max-w-sm">
-                Your donation supports outreach, materials, and community engagement.
-              </p>
+            <div class="hero-card">
+              Your donation supports outreach, materials, and community engagement.
               <div class="flex justify-center mt-4">
-                <a target="_blank" href="https://donorbox.org/yes-for-wilmington-schools" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                <a target="_blank" href="https://donorbox.org/yes-for-wilmington-schools" class="button">
                   Donate
                 </a>
               </div>
             </div>
             
             <!-- Get Involved -->
-            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col border-2 border-gray-100">
+            <div class="hero-card">
               <div class="flex flex-row gap-4 items-center flex-1">
-                <p class="text-lg text-center mx-auto max-w-sm">
-                  Join our efforts to spread the word and encourage voter turnout.
-                </p>
+                Join our efforts to spread the word and encourage voter turnout.
               </div>
               <div class="flex justify-center mt-4">
-                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdd_BH1bbJ5qh_TwjVj-UQGDApg8wodyM3kfkCBQf4gvfqs5g/viewform" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdd_BH1bbJ5qh_TwjVj-UQGDApg8wodyM3kfkCBQf4gvfqs5g/viewform" class="button">
                   Get Involved
                 </a>
               </div>
