@@ -6,7 +6,7 @@
   <title>Vote Yes For Wilmington Schools</title>
   <link rel="stylesheet" href="./src/style.css">
 </head>
-<body class="min-h-screen text-black">
+<strongody class="min-h-screen text-black">
   <div id="app" class="flex flex-col min-h-screen">
 
     <!-- Header -->
@@ -28,57 +28,71 @@
     </header>
 
     <!-- Main Content -->
-    <main class="py-12 flex flex-col items-center flex-1 gap-12">
+    <main class="flex flex-col items-center flex-1">
       <!-- Hero Section -->
-      <section id="home" class="px-6 text-center text-primary-400 h-[calc(100vh-80px-200px)] flex flex-col md:flex-row justify-around items-center">
-        <div class="w-full md:w-1/2 flex justify-center">
-          <img src="./src/images/yes-logo.png" alt="Yes For Wilmington Schools Logo" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px] object-cover rounded-lg pt-12">
-        </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-4xl font-bold mb-4">
-            Please vote YES on September 13th &amp; 16th.
-          </h2>
-          <p class="text-xl mb-8 max-w-3xl mx-auto">
-            Join us in advocating for better education, resources, and opportunities for all students in Wilmington.
-          </p>
-          <a href="#about" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
-            Learn More
-          </a>
+      <section id="home" class="px-6 text-center text-white h-screen sm:h-[calc(100vh-80px-200px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center bg-primary-400">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl p-6 md:p-12">
+          <div class="flex justify-center">
+            <img
+              src="./src/images/yes-logo.png"
+              alt="Yes For Wilmington Schools Logo"
+              class="logo-image w-[250px] h-[250px] md:w-[400px] md:h-[400px] object-cover rounded-lg pt-12"
+            />
+          </div>  
+          <div class="flex flex-col gap-4">
+            <h2 class="text-4xl font-bold mb-4">
+              Please vote YES on September 13th and 16th.
+            </h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+              A 2/3 vote is required at the in-person meeting on September 13th. We need <strong><u>all</u></strong> parents, guardians, caregivers, and supporters to attend and help secure a brighter future for Wilmington students.
+            </p>
+            <a href="#about" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+              Learn More
+            </a>
+          </div>
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about" class="bg-primary-400 text-white flex flex-col items-center w-full">
+      <section id="about" class="bg-white text-primary-400 flex flex-col items-center w-full">
         <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl p-6 md:p-12">
           <div>
-            <h3 class="text-3xl font-bold mb-6">About Our Mission</h3>
+            <h2 class="text-3xl font-bold mb-6">The right school. The right price tag.</h2>
+            </h2>
             <p class=" mb-4">
-              We believe all children in Wilmington deserve access to a quality education that will prepare them for success in an ever changing world.
+              <strong>Our schools are outdated.</strong> They no longer meet educational, safety, or accessibility standards
             </p>
             <p class="mb-4">
-              Our Wilmington Elementary Schools need extensive repairs and lack the basic infrastructure of modern learning facilities.
+              The new PreK&hyphen;5 school is the strongest option. It&apos;s modern, efficient, brings all students 
+              together &hyphen; and it&apos;s cost-effective, with a similar price tag ($1M) to simply repairing the 
+              existing schools. This option and associated design reflects <b>years of community input</b> and is 
+              designed with educators and families in mind.
+
             </p>
             <p class="mb-4">
-              Building a much needed PreK-5 school relies on your vote.
+              Building a much needed PreK&hyphen;5 school <b>relies on your vote.</b>
             </p>
           </div>
           <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-            <img src="./src/images/placeholder.svg" alt="About our mission" class="w-full h-full object-cover rounded-lg">
+            <img
+              src="./src/images/school-render.jpg"
+              alt="Render of the proposed Wilmington PreK-5 school"
+              class="school-render w-full h-full object-cover rounded-lg" />
           </div>
         </div>
       </section>
 
       <!-- Support Section -->
-      <section id="support" class="text-primary-400 flex flex-col items-center w-full">
+      <section id="support" class="text-primary-400 bg-primary-100 flex flex-col items-center w-full">
         <div class="flex flex-col gap-12 items-center max-w-7xl p-6 md:p-12">
-          <h3 class="text-3xl font-bold text-center">How You Can Support</h3>
+          <h2 class="text-3xl font-bold text-center text-primary-400">How You Can Support</h2>
           <div class="grid md:grid-cols-3 gap-8">
 
             <!-- Learn More -->
-            <div class="bg-white p-6 rounded-lg drop-shadow-lg border border-gray-200 h-full flex flex-col">
+            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col">
               <div class="flex flex-row gap-4 items-center flex-1">
                 <p class="text-lg text-center mx-auto max-w-sm">
-                  Learn more about how your vote will have a direct impact on our schools.
+                  Understand the plan and how your vote directly impacts our schools.
                 </p>
               </div>
               <div class="flex justify-center mt-4">
@@ -89,9 +103,9 @@
             </div>
 
             <!-- Donate -->
-            <div class="bg-white p-6 rounded-lg drop-shadow-lg border border-gray-200 h-full flex flex-col items-center text-center">
+            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col items-center text-center">
               <p class="text-lg mb-4 text-center mx-auto max-w-sm">
-                Your financial support helps us advocate for better Wilmington Schools.
+                Your donation supports outreach, materials, and community engagement.
               </p>
               <div class="flex justify-center mt-4">
                 <a target="_blank" href="https://donorbox.org/yes-for-wilmington-schools" class="bg-primary-200 hover:bg-primary-300 hover:shadow-lg text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
@@ -101,10 +115,10 @@
             </div>
             
             <!-- Get Involved -->
-            <div class="bg-white p-6 rounded-lg drop-shadow-lg border border-gray-200 h-full flex flex-col">
+            <div class="hero-card drop-shadow-lg border border-gray-200 h-full flex flex-col border-2 border-gray-100">
               <div class="flex flex-row gap-4 items-center flex-1">
                 <p class="text-lg text-center mx-auto max-w-sm">
-                  Help us raise awareness and advocate for educational policies and funding.
+                  Join our efforts to spread the word and encourage voter turnout.
                 </p>
               </div>
               <div class="flex justify-center mt-4">
@@ -122,7 +136,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-100 text-primary-400 py-8">
+    <footer class="bg-white text-primary-400 py-8 border-t border-gray-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p>&copy; 2025 Vote Yes For Wilmington Schools. All rights reserved.</p>
         <p>Paid for by the Yes for Wilmington Schools Committee (a group of Wilmington residents volunteering their time to help support our town and our community)</p>

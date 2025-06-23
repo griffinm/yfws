@@ -1,8 +1,6 @@
-// Main JavaScript file for Yes For Wilmington Schools
 
-// Import images (Vite will handle optimization and hashing)
-import placeholderImage from './images/placeholder.svg'
 import logoImage from './images/yes-logo.png'
+import schoolRender from './images/school-render.jpg'
 
 // Add fade-in animation to sections when they come into view
 const observerOptions = {
@@ -21,9 +19,14 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections
 document.addEventListener('DOMContentLoaded', () => {
   // Set the placeholder image in the about section
-  const imagePlaceholder = document.querySelector('.logo-image');
-  if (imagePlaceholder) {
-    imagePlaceholder.src = logoImage
+  const logoImageElement = document.querySelector('.logo-image');
+  if (logoImageElement) {
+    logoImageElement.src = logoImage
+  }
+
+  const schoolRenderElement = document.querySelector('.school-render');
+  if (schoolRenderElement) {
+    schoolRenderElement.src = schoolRender
   }
 
   const sections = document.querySelectorAll('section');
@@ -92,6 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
       hideMobileMenu();
     }
   });
-
-  console.log('Yes For Wilmington Schools website loaded successfully!');
 }); 
