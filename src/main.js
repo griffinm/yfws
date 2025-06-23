@@ -1,4 +1,3 @@
-
 import logoImage from './images/yes-logo.png'
 import schoolRender from './images/school-render.jpg'
 
@@ -15,6 +14,73 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, observerOptions);
+
+// Accordion functionality
+function initAccordion() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  accordionItems.forEach(item => {
+    const trigger = item.querySelector('.accordion-trigger');
+    const content = item.querySelector('.accordion-content');
+    const icon = item.querySelector('.accordion-icon');
+    
+    if (trigger && content) {
+      // Initially collapse all accordion contents BEFORE adding event listener
+      content.style.maxHeight = '0px';
+      content.classList.add('is-collapsed');
+      content.setAttribute('hidden', '');
+      trigger.setAttribute('aria-expanded', 'false');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('is-collapsed') && content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        // Close all other accordion items
+        accordionItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherContent = otherItem.querySelector('.accordion-content');
+            const otherIcon = otherItem.querySelector('.accordion-icon');
+            const otherTrigger = otherItem.querySelector('.accordion-trigger');
+            
+            if (otherContent) {
+              otherContent.style.maxHeight = '0px';
+              otherContent.classList.add('is-collapsed');
+              otherContent.setAttribute('hidden', '');
+            }
+            if (otherIcon) {
+              otherIcon.style.transform = 'rotate(0deg)';
+            }
+            if (otherTrigger) {
+              otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+        
+        // Toggle current item
+        if (isOpen) {
+          content.style.maxHeight = '0px';
+          content.classList.add('is-collapsed');
+          content.setAttribute('hidden', '');
+          trigger.setAttribute('aria-expanded', 'false');
+          if (icon) {
+            icon.style.transform = 'rotate(0deg)';
+          }
+        } else {
+          // Remove hidden and .is-collapsed before setting max-height
+          content.removeAttribute('hidden');
+          content.classList.remove('is-collapsed');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (icon) {
+            icon.style.transform = 'rotate(180deg)';
+          }
+          // Use requestAnimationFrame to ensure the browser registers the state change
+          requestAnimationFrame(() => {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          });
+        }
+      });
+    }
+  });
+}
 
 // Observe all sections
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  // Initialize accordion functionality
+  initAccordion();
 
   // Add smooth scrolling to navigation links
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
