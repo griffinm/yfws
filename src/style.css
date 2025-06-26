@@ -31,6 +31,16 @@ section.home-section {
   }
 }
 
+.top-nav {
+  @apply bg-primary-100 shadow-sm text-primary-400 fixed top-0 left-0 right-0 z-50 shadow-lg;
+
+  nav {
+    a.nav-link {
+      @apply hover:text-white px-3 py-2 rounded-md font-medium w-full transition-all duration-200 w-fit;
+    }
+  }
+}
+
 .logo-image {
   @apply max-w-full h-auto sm:w-[300px] h-auto md:w-[400px] lg:w-[500px] object-cover pt-12;
 }
@@ -94,10 +104,6 @@ a {
   &:hover {
     color: rgb(41, 50, 90);
   }
-}
-
-nav a.nav-link {
-  @apply text-gray-500 hover:text-primary-400 px-3 py-2 rounded-md  font-medium w-full transition-all duration-200 w-fit;
 }
 
 .button {
