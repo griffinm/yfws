@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body class="min-h-screen text-black">
-  <div id="app" class="flex flex-col min-h-screen">
+  <div id="app" class="flex flex-col min-h-screen home-page">
 
     <!-- Header -->
     <header class="top-nav">
@@ -28,8 +28,8 @@
     <!-- Main Content -->
     <main class="flex flex-col items-center flex-1">
       <!-- Hero Section -->
-      <section id="home" class="home-section text-center text-white h-screen sm:h-[calc(100vh-80px-200px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center bg-primary-400">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl md:p-12">
+      <section id="home" class="home-section hero-section home-section-dark-blue">
+        <div class="section-content grid grid-cols-1 md:grid-cols-2 md:gap-12 items-center">
           <div class="flex justify-center">
             <img
               src="./src/images/yes-logo.png"
@@ -38,9 +38,7 @@
             />
           </div>  
           <div class="flex flex-col gap-4">
-            <h2 class="text-4xl font-bold mb-4">
-              Please vote YES on September 13th and 16th.
-            </h2>
+            <h2>Please vote YES on September 13th and 16th.</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">
               A 2/3 vote is required at the in-person meeting on September 13th. We need <strong><u>all</u></strong> parents, guardians, caregivers, and supporters to attend and help secure a brighter future for Wilmington students.
             </p>
@@ -53,7 +51,7 @@
 
       <!-- About Section -->
       <section id="about" class="home-section home-section-white">
-        <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl md:p-12">
+        <div class="section-content grid md:grid-cols-2 gap-12">
           <div>
             <h2 class="text-3xl font-bold mb-6">The right school. The right price tag.</h2>
             </h2>
@@ -82,8 +80,8 @@
 
       <!-- Support Section -->
       <section id="support" class="home-section home-section-light-blue">
-        <div class="flex flex-col gap-12 items-center max-w-7xl md:p-12">
-          <h2 class="text-3xl font-bold text-center text-primary-400">How You Can Help</h2>
+        <div class="section-content flex flex-col gap-12">
+          <h2>How You Can Help</h2>
           <div class="grid md:grid-cols-3 gap-8">
 
             <!-- Learn More -->
