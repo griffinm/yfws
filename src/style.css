@@ -18,18 +18,59 @@ html {
   scroll-behavior: smooth;
 }
 
-section.home-section {
-  padding: 3rem 2rem;
-  @apply w-full flex flex-col items-center;
+.top-nav {
+  @apply bg-primary-100 shadow-sm text-primary-400 fixed top-0 left-0 right-0 z-50 shadow-lg;
 
-  &.home-section-white {
-    @apply bg-white text-primary-400;
-  }
-
-  &.home-section-light-blue {
-    @apply bg-primary-100 text-primary-400;
+  nav {
+    a.nav-link {
+      @apply hover:text-white px-3 py-2 rounded-md font-medium w-full transition-all duration-200 w-fit text-lg;
+    }
   }
 }
+
+.home-page {
+  @apply flex flex-col min-h-screen;
+
+  .home-section {
+    padding: 3rem 2rem;
+    @apply w-full flex flex-col items-center w-full;
+  
+
+    .section-content {
+      @apply max-w-7xl md:p-12 items-center;
+    }
+
+    h2 {
+      @apply text-4xl font-bold text-primary-400;
+    }
+
+    &.home-section-light-blue {
+      @apply bg-primary-100 text-primary-400;
+    }
+  
+    &.home-section-white {
+      @apply bg-white text-primary-400;
+    }
+  
+    &.home-section-dark-blue {
+      @apply bg-primary-400 text-white;
+
+      h2 {
+        @apply text-white;
+      }
+    }
+  }
+}
+
+section.hero-section {
+
+  @apply text-center text-white h-[calc(100vh-300px)] sm:h-[calc(100vh-280px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center;
+
+  .logo-image {
+    @apply max-w-full h-auto sm:w-[300px] h-auto md:w-[400px] lg:w-[500px] object-cover md:pt-12;
+  }
+}
+
 
 /* Custom animations */
 @keyframes fadeIn {
@@ -84,16 +125,11 @@ table {
 }
 
 a {
-  font-weight: 500;
-  transition: color 0.3s ease;
+  @apply font-medium transition-all text-xl duration-200;
 
   &:hover {
-    color: rgb(41, 50, 90);
+    @apply text-primary-400;
   }
-}
-
-nav a.nav-link {
-  @apply text-gray-500 hover:text-primary-400 px-3 py-2 rounded-md  font-medium w-full transition-all duration-200 w-fit;
 }
 
 .button {
@@ -124,7 +160,11 @@ ol, ul {
 
 .hero-card {
   background-color: rgba(255, 255, 255, 1);
-  @apply drop-shadow-lg border border-gray-200 p-7 rounded-lg transition-all duration-200 items-center text-center text-lg;
+  @apply drop-shadow-lg border border-gray-200 p-7 rounded-lg transition-all duration-200 items-center text-center;
+
+  a {
+    @apply w-full;
+  }
 
   &:hover {
     @apply drop-shadow-xl;
