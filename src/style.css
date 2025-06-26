@@ -19,7 +19,7 @@ html {
 }
 
 section.home-section {
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
   @apply w-full flex flex-col items-center;
 
   &.home-section-white {
@@ -29,6 +29,10 @@ section.home-section {
   &.home-section-light-blue {
     @apply bg-primary-100 text-primary-400;
   }
+}
+
+.logo-image {
+  @apply max-w-full h-auto sm:w-[300px] sm:h-[300px] md:w-[500px] md:h-[500px] object-cover rounded-lg pt-12;
 }
 
 /* Custom animations */
