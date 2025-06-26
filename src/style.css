@@ -23,7 +23,7 @@ html {
 
   nav {
     a.nav-link {
-      @apply hover:text-white px-3 py-2 rounded-md font-medium w-full transition-all duration-200 w-fit;
+      @apply hover:text-white px-3 py-2 rounded-md font-medium w-full transition-all duration-200 w-fit text-lg;
     }
   }
 }
@@ -125,11 +125,10 @@ table {
 }
 
 a {
-  font-weight: 500;
-  transition: color 0.3s ease;
+  @apply font-medium transition-all text-xl duration-200;
 
   &:hover {
-    color: rgb(41, 50, 90);
+    @apply text-primary-400;
   }
 }
 
@@ -161,7 +160,11 @@ ol, ul {
 
 .hero-card {
   background-color: rgba(255, 255, 255, 1);
-  @apply drop-shadow-lg border border-gray-200 p-7 rounded-lg transition-all duration-200 items-center text-center text-lg;
+  @apply drop-shadow-lg border border-gray-200 p-7 rounded-lg transition-all duration-200 items-center text-center;
+
+  a {
+    @apply w-full;
+  }
 
   &:hover {
     @apply drop-shadow-xl;
