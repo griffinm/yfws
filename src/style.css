@@ -32,7 +32,7 @@ html {
   @apply flex flex-col min-h-screen;
 
   .home-section {
-    padding: 3rem 2rem;
+    padding: 2rem;
     @apply w-full flex flex-col items-center w-full;
   
 
@@ -64,7 +64,7 @@ html {
 
 section.hero-section {
 
-  @apply text-center text-white h-[calc(100vh-300px)] sm:h-[calc(100vh-280px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center;
+  @apply text-center text-white sm:h-[calc(100vh-280px)] min-h-min w-full flex flex-col md:flex-row justify-around items-center;
 
   .logo-image {
     @apply max-w-full h-auto sm:w-[300px] h-auto md:w-[400px] lg:w-[500px] object-cover md:pt-12;
